@@ -4,6 +4,7 @@ import com.wjbos.gatesystem.dto.ResponseDto;
 import com.wjbos.gatesystem.dto.TokenDto;
 import com.wjbos.gatesystem.service.impl.TokenServiceImpl;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,8 +18,11 @@ public class TokenController {
     TokenServiceImpl tokenService;
 
     @PostMapping
-    public ResponseEntity<TokenDto> createAndSendEntryToken(String cellNumber){
+    public ResponseEntity<ResponseDto> createAndSendEntryToken(String cellNumber) {
+        tokenService.sendTokenViaSMS(cellNumber);
         tokenService.createToken(cellNumber);
-        tokenService.sendCodeViaSMS();
+        return ResponseEntity
+                .status(HttpStatus.CREATED)
+                .body(new ResponseDto("Token Created and Sent", "201"));
     }
 }
