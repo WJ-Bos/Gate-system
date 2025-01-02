@@ -4,5 +4,5 @@ import com.wjbos.gatesystem.dto.TokenDto;
 
 public interface TokenService {
 
-    TokenDto createToken(String recipientCellNumber);
+    void createToken(String recipientCellNumber);
 }

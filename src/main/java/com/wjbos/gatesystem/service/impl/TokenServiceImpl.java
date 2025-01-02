@@ -7,6 +7,7 @@ import com.wjbos.gatesystem.exceptions.TokenValueDoesNotExistsException;
 import com.wjbos.gatesystem.mapper.TokenMapper;
 import com.wjbos.gatesystem.repo.TokenRepository;
 import com.wjbos.gatesystem.service.TokenService;
+import jakarta.validation.constraints.Pattern;
 import lombok.RequiredArgsConstructor;
 
 import java.time.LocalDateTime;
@@ -19,7 +20,8 @@ public class TokenServiceImpl implements TokenService {
     TokenRepository tokenRepository;
 
     @Override
-    public TokenDto createToken(String recipientCellNumber) {
+    public void createToken(@Pattern(regexp = "^\\+27\\s?[6-8]\\d{8}$\n", message = "Not a Valid cell Number")
+                                   String recipientCellNumber){
         Token token = new Token();
         Random rnd = new Random();
         int code = rnd.nextInt(999999);
@@ -31,10 +33,9 @@ public class TokenServiceImpl implements TokenService {
         token.setHasExited(false);
 
         tokenRepository.save(token);
-        return TokenMapper.mapToTokenDto(token);
     }
 
-    public void sendTokenViaSMS(String cellNumber) {
+    public boolean sendTokenViaSMS(String cellNumber) {
         Token userToken = tokenRepository.findByRecipientCellNumber(cellNumber).orElseThrow(
                 () -> new TokenDoesNotExistsException(cellNumber));
 
