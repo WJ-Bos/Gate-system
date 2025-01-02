@@ -8,11 +8,11 @@ import java.util.Random;
 public class TokenServiceImpl implements TokenService {
 
     @Override
-    public void createToken(String senderCellNumber, String recipientCellNumber) {
+    public void createToken( String recipientCellNumber) {
         Token token = new Token();
-        Random random = new Random();
+        Random rnd = new Random();
+        int code = rnd.nextInt(999999);
 
-        //TODO: Add 6 digit random token value
-        token.setTokenValue();
+        token.setTokenValue(String.format("%06d", code));
     }
 }
