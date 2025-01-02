@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 @Entity
 @Getter
 @Setter
+@Table(name = "tokens")
 public class Token {
 
     @Id
@@ -20,10 +21,10 @@ public class Token {
     private String tokenValue;
     @Column(name = "time_issued")
     private LocalDateTime timeIssued;
-    @Column(name = "sender_cell_number")
-    private String senderCellNumber;
+    @Column(name = "recipient_cell_number")
     private String recipientCellNumber;
     @Column(name = "has_entered")
     private boolean hasEntered;
+    @Column(name = "has_exited")
     private boolean hasExited;
 }
