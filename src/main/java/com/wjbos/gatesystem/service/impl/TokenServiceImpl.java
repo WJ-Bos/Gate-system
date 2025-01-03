@@ -8,13 +8,16 @@ import com.wjbos.gatesystem.mapper.TokenMapper;
 import com.wjbos.gatesystem.repo.TokenRepository;
 import com.wjbos.gatesystem.service.TokenService;
 import jakarta.validation.constraints.Pattern;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
 import java.util.Random;
 
-@RequiredArgsConstructor
+@AllArgsConstructor
+@Service
 public class TokenServiceImpl implements TokenService {
 
     TokenRepository tokenRepository;
