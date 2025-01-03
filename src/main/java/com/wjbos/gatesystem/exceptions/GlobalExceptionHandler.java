@@ -32,11 +32,22 @@ public class GlobalExceptionHandler extends RuntimeException {
                 exception.getMessage(),
                 LocalDateTime.now()
         );
-        return new ResponseEntity<>(responseDto,HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(responseDto,HttpStatus.NOT_FOUND);
     }
 
     @ExceptionHandler(TokenDoesNotExistsException.class)
     public ResponseEntity<ErrorResponseDto> handleTokenValueDoesNotExistException(Exception exception, WebRequest request){
+        ErrorResponseDto responseDto = new ErrorResponseDto(
+                request.getDescription(false),
+                HttpStatus.NOT_FOUND,
+                exception.getMessage(),
+                LocalDateTime.now()
+        );
+        return new ResponseEntity<>(responseDto,HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(UserDoesNotExistException.class)
+    public ResponseEntity<ErrorResponseDto> handleUserDoesNotExistException(Exception exception, WebRequest request){
         ErrorResponseDto responseDto = new ErrorResponseDto(
                 request.getDescription(false),
                 HttpStatus.NOT_FOUND,
