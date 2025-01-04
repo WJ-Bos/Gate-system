@@ -1,6 +1,6 @@
-package com.wjbos.gatesystem.exceptions;
+package com.wjbos.gatesystem.features.token.exceptions;
 
-import com.wjbos.gatesystem.dto.ErrorResponseDto;
+import com.wjbos.gatesystem.features.token.dto.ErrorResponseDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

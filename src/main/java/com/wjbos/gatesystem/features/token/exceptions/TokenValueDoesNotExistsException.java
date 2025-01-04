@@ -1,4 +1,4 @@
-package com.wjbos.gatesystem.exceptions;
+package com.wjbos.gatesystem.features.token.exceptions;
 
 public class TokenValueDoesNotExistsException extends RuntimeException {
     public TokenValueDoesNotExistsException(String tokenValue) {

@@ -1,6 +1,6 @@
-package com.wjbos.gatesystem.repo;
+package com.wjbos.gatesystem.features.token.repo;
 
-import com.wjbos.gatesystem.entity.Token;
+import com.wjbos.gatesystem.features.token.entity.Token;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

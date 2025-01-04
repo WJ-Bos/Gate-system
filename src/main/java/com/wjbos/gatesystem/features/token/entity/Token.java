@@ -1,4 +1,4 @@
-package com.wjbos.gatesystem.entity;
+package com.wjbos.gatesystem.features.token.entity;
 
 import jakarta.persistence.*;
 import lombok.Generated;

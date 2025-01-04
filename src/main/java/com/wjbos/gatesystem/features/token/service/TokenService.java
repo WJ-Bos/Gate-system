@@ -1,6 +1,4 @@
-package com.wjbos.gatesystem.service;
-
-import com.wjbos.gatesystem.dto.TokenDto;
+package com.wjbos.gatesystem.features.token.service;
 
 public interface TokenService {
 

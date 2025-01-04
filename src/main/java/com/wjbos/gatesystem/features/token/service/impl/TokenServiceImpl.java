@@ -1,19 +1,15 @@
-package com.wjbos.gatesystem.service.impl;
+package com.wjbos.gatesystem.features.token.service.impl;
 
-import com.wjbos.gatesystem.dto.TokenDto;
-import com.wjbos.gatesystem.entity.Token;
-import com.wjbos.gatesystem.exceptions.TokenDoesNotExistsException;
-import com.wjbos.gatesystem.exceptions.TokenValueDoesNotExistsException;
-import com.wjbos.gatesystem.mapper.TokenMapper;
-import com.wjbos.gatesystem.repo.TokenRepository;
-import com.wjbos.gatesystem.service.TokenService;
+import com.wjbos.gatesystem.features.token.entity.Token;
+import com.wjbos.gatesystem.features.token.exceptions.TokenDoesNotExistsException;
+import com.wjbos.gatesystem.features.token.exceptions.TokenValueDoesNotExistsException;
+import com.wjbos.gatesystem.features.token.repo.TokenRepository;
+import com.wjbos.gatesystem.features.token.service.TokenService;
 import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.util.Optional;
 import java.util.Random;
 
 @AllArgsConstructor

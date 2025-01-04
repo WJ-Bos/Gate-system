@@ -1,7 +1,7 @@
-package com.wjbos.gatesystem.mapper;
+package com.wjbos.gatesystem.features.token.mapper;
 
-import com.wjbos.gatesystem.dto.TokenDto;
-import com.wjbos.gatesystem.entity.Token;
+import com.wjbos.gatesystem.features.token.dto.TokenDto;
+import com.wjbos.gatesystem.features.token.entity.Token;
 
 public class TokenMapper {
 

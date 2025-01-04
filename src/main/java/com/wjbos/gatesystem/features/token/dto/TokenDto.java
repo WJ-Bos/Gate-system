@@ -1,4 +1,4 @@
-package com.wjbos.gatesystem.dto;
+package com.wjbos.gatesystem.features.token.dto;
 
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Pattern;

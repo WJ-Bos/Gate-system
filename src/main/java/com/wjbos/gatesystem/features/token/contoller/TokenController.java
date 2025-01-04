@@ -1,8 +1,7 @@
-package com.wjbos.gatesystem.contoller;
+package com.wjbos.gatesystem.features.token.contoller;
 
-import com.wjbos.gatesystem.dto.ResponseDto;
-import com.wjbos.gatesystem.dto.TokenDto;
-import com.wjbos.gatesystem.service.impl.TokenServiceImpl;
+import com.wjbos.gatesystem.features.token.dto.ResponseDto;
+import com.wjbos.gatesystem.features.token.service.impl.TokenServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
