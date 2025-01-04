@@ -8,7 +8,7 @@ services:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: gate-system
+      MYSQL_DATABASE: gatesys
     volumes:
       - mysql_data:/var/lib/mysql
 
