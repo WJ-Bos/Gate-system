@@ -16,8 +16,6 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         return authenticationUserRepository.findByEmail(email).orElseThrow(
                 () -> new IllegalArgumentException("User not found")
         );
-
-
     }
 }
 
