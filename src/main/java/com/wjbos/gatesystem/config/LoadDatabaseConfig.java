@@ -12,7 +12,7 @@ public class LoadDatabaseConfig {
     @Bean
     public CommandLineRunner initDatabase(AuthenticationUserRepository authenticationUserRepository){
         return args -> {
-            AuthenticationUser authenticationUser = new AuthenticationUser(1L,"user@example.com","password");
+            AuthenticationUser authenticationUser = new AuthenticationUser("user@example.com","password");
             authenticationUserRepository.save(authenticationUser);
         };
     }
