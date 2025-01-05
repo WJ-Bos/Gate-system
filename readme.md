@@ -1,4 +1,4 @@
-# Resident Entry Code System
+ # Resident Entry Code System
 
 Welcome to the **Resident Entry Code System**! This system allows residents to generate unique entry codes for users, which are then sent directly to the recipient's phone. These codes serve two primary functions: enabling entry and exit to a designated location. Built using **Spring Boot** and **Java**, this system streamlines access control by providing secure, easily-managed, and time-efficient entry and exit codes for authorized users.
 
